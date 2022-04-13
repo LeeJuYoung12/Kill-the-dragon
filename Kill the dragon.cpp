@@ -703,7 +703,6 @@ int main() {
 
 	shuffle();
 	shufflex();
-	
 
 	start = create2("image/start.png", scene1, 440, 250);
 	end = create2("image/end.png", scene1, 440, 130);
