@@ -7,11 +7,10 @@
 #include<conio.h>
 
 
-#define g1_character_size_x 35 
-#define g1_character_size_y 60 
-#define g1_obj1_size_width 25 
-#define g1_obj1_size_hight 30 
-
+#define character_size_x 35 
+#define character_size_y 60 
+#define obj1_size_width 25 
+#define obj1_size_hight 30
 #define random_height 1500
 
 SceneID scene1, scene2, scene3, scene4;//scene1 은 시작화면, scene2 은 인게임화면, scene3 은 엔딩화면, scene1 은 데스화면 
@@ -201,7 +200,7 @@ void death() {
 
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 6; j++) {
-			if ((cx < (objx[j][i] + g1_obj1_size_width)) && (cx + g1_character_size_x > objx[j][i]) && (cy < (objy[j][i] + g1_obj1_size_hight)) && (cy + g1_character_size_y > objy[j][i])) {
+			if ((cx < (objx[j][i] + obj1_size_width)) && (cx + character_size_x > objx[j][i]) && (cy < (objy[j][i] + obj1_size_hight)) && (cy + character_size_y > objy[j][i])) {
 
 				stopTimer(timer1_t);
 				stopTimer(movec_t);
@@ -290,7 +289,7 @@ void finish() {
 //검 획득
 void getsword() {
 
-		if ((cx < (obj1_x[1] + 10)) && (cx + g1_character_size_x > obj1_x[1]) && (cy < (obj1_y[1] + 10)) && (cy + g1_character_size_y > obj1_y[1])&&check[0]) {
+		if ((cx < (obj1_x[1] + 10)) && (cx + character_size_x > obj1_x[1]) && (cy < (obj1_y[1] + 10)) && (cy + character_size_y > obj1_y[1])&&check[0]) {
 			
 			playSound(attack_bgm[0]);
 			locateObject(obj1_1[1], scene2, obj1_x[1], 721);
@@ -300,7 +299,7 @@ void getsword() {
 			showObject(effect[0]);
 		}
 
-		if ((cx < (obj1_x[2] + 10)) && (cx + g1_character_size_x > obj1_x[2]) && (cy < (obj1_y[2] + 10)) && (cy + g1_character_size_y > obj1_y[2]) && check[1]) {
+		if ((cx < (obj1_x[2] + 10)) && (cx + character_size_x > obj1_x[2]) && (cy < (obj1_y[2] + 10)) && (cy + character_size_y > obj1_y[2]) && check[1]) {
 			
 			playSound(attack_bgm[1]);
 			locateObject(obj1_1[2], scene2, obj1_x[2], 721);
@@ -310,7 +309,7 @@ void getsword() {
 			showObject(effect[1]);
 		}
 
-		if ((cx < (obj1_x[3] + 10)) && (cx + g1_character_size_x > obj1_x[3]) && (cy < (obj1_y[3] + 10)) && (cy + g1_character_size_y > obj1_y[3]) && check[2]) {
+		if ((cx < (obj1_x[3] + 10)) && (cx + character_size_x > obj1_x[3]) && (cy < (obj1_y[3] + 10)) && (cy + character_size_y > obj1_y[3]) && check[2]) {
 			
 			playSound(attack_bgm[2]);
 			locateObject(obj1_1[3], scene2, obj1_x[3], 721);
@@ -320,7 +319,7 @@ void getsword() {
 			showObject(effect[2]);
 		}
 
-		if ((cx < (obj1_x[4] + 10)) && (cx + g1_character_size_x > obj1_x[4]) && (cy < (obj1_y[4] + 10)) && (cy + g1_character_size_y > obj1_y[4]) && check[3]) {
+		if ((cx < (obj1_x[4] + 10)) && (cx + character_size_x > obj1_x[4]) && (cy < (obj1_y[4] + 10)) && (cy + character_size_y > obj1_y[4]) && check[3]) {
 			
 			playSound(attack_bgm[3]);
 			locateObject(obj1_1[4], scene2, obj1_x[4], 721);
@@ -330,7 +329,7 @@ void getsword() {
 			playSound(animation1_bgm);
 		}
 
-		if ((cx < (obj1_x[5] + 10)) && (cx + g1_character_size_x > obj1_x[5]) && (cy < (obj1_y[5] + 10)) && (cy + g1_character_size_y > obj1_y[5]) && check[4]) {
+		if ((cx < (obj1_x[5] + 10)) && (cx + character_size_x > obj1_x[5]) && (cy < (obj1_y[5] + 10)) && (cy + character_size_y > obj1_y[5]) && check[4]) {
 			
 			playSound(attack_bgm[4]);
 			locateObject(obj1_1[5], scene2, obj1_x[5], 721);
@@ -340,7 +339,7 @@ void getsword() {
 			playSound(animation2_bgm[0]);
 		}
 
-		if ((cx < (obj1_x[6] + 10)) && (cx + g1_character_size_x > obj1_x[6]) && (cy < (obj1_y[6] + 10)) && (cy + g1_character_size_y > obj1_y[6]) && check[5]) {
+		if ((cx < (obj1_x[6] + 10)) && (cx + character_size_x > obj1_x[6]) && (cy < (obj1_y[6] + 10)) && (cy + character_size_y > obj1_y[6]) && check[5]) {
 			
 			playSound(attack_bgm[5]);
 			locateObject(obj1_1[6], scene2, obj1_x[6], 721);
@@ -350,7 +349,7 @@ void getsword() {
 			showObject(effect[0]);
 		}
 
-		if ((cx < (obj1_x[7] + 10)) && (cx + g1_character_size_x > obj1_x[7]) && (cy < (obj1_y[7] + 10)) && (cy + g1_character_size_y > obj1_y[7]) && check[6]) {
+		if ((cx < (obj1_x[7] + 10)) && (cx + character_size_x > obj1_x[7]) && (cy < (obj1_y[7] + 10)) && (cy + character_size_y > obj1_y[7]) && check[6]) {
 			
 			playSound(attack_bgm[6]);
 			locateObject(obj1_1[7], scene2, obj1_x[7], 721);
